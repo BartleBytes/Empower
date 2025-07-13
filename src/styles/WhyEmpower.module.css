@@ -1,0 +1,43 @@
+.why {
+  padding: 4rem 1.5rem;
+  background-color: #fef9ff;
+  text-align: center;
+}
+
+.why h2 {
+  font-size: 2rem;
+  color: #4b3f72;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #5c51a4;
+}
+
+.card p {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.icon {
+  color: #7b6fc2;
+}

@@ -1,0 +1,38 @@
+.testimonials {
+  background-color: #eae2f8;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #4b3f72;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  font-size: 1rem;
+}
+
+.quote {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-weight: 600;
+  color: #7b6fc2;
+}
