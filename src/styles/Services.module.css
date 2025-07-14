@@ -1,5 +1,5 @@
 .services {
-  background-color: #f0f7f4;
+  background-color: #f9fbfa;
   padding: 4rem 1.5rem;
   text-align: center;
 }
@@ -24,7 +24,7 @@
   padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  color: #2e7d32;
+  color: #4b3f72;
   font-weight: 500;
 }
 
