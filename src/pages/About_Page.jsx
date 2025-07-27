@@ -1,5 +1,5 @@
 import styles from "../styles/AboutPage.module.css";
-import profileImage from "../assets/alyssa_2.jpg"; // Use your own image here
+import profileImage from "../assets/Alyssa_2.jpg"; // Use your own image here
 
 function About() {
   return (
