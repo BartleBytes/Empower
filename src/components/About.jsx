@@ -1,5 +1,6 @@
 import styles from "../styles/About.module.css";
 import alyssa from "../assets/Alyssa.jpg";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -16,7 +17,7 @@ function About() {
           <p>
             Whether your child needs support with speech sounds, language development, or social communication, Alyssa is committed to personalized care that empowers each child to grow with confidence.
           </p>
-          <a className={styles.button} href="/Contact">Book a Free Consult</a>
+          <a className={styles.button} Link to="/contact">Book a Free Consult</a>
         </div>
       </div>
     </section>
