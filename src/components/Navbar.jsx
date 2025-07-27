@@ -4,7 +4,7 @@ import styles from "../styles/Navbar.module.css";
 function Navbar() {
   return (
     <nav className={styles.nav}>
-      <div className={styles.logo}>Empower</div>
+      <div className={styles.logo}>EMPOWER</div>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
