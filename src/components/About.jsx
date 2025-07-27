@@ -16,8 +16,9 @@ function About() {
           </p>
           <p>
             Whether your child needs support with speech sounds, language development, or social communication, Alyssa is committed to personalized care that empowers each child to grow with confidence.
-          </p>
-          <a className={styles.button} Link to="/contact">Book a Free Consult</a>
+          </p>  
+        <Link to="/contact" className={styles.button}>Book a Free Consult</Link>
+
         </div>
       </div>
     </section>
