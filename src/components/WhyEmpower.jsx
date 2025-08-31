@@ -1,9 +1,5 @@
 import styles from "../styles/WhyEmpower.module.css";
-<<<<<<< HEAD
-import { CheckCircle } from "lucide-react"; // optional if using icons
-=======
 import { CheckCircle } from "lucide-react";
->>>>>>> a9b3a65 (changed styles)
 
 function WhyEmpower() {
   const benefits = [
@@ -24,15 +20,6 @@ function WhyEmpower() {
   return (
     <section className={styles.why}>
       <h2>Why Choose Empower?</h2>
-<<<<<<< HEAD
-      <div className={styles.grid}>
-        {benefits.map((item, index) => (
-          <div key={index} className={styles.card}>
-            <CheckCircle size={40} className={styles.icon} />
-            <h3>{item.title}</h3>
-            <p>{item.desc}</p>
-          </div>
-=======
 
       <div className={styles.grid}>
         {benefits.map((item) => (
@@ -41,7 +28,6 @@ function WhyEmpower() {
             <h3 className={styles.title}>{item.title}</h3>
             <p className={styles.desc}>{item.desc}</p>
           </article>
->>>>>>> a9b3a65 (changed styles)
         ))}
       </div>
     </section>

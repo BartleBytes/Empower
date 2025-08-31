@@ -1,17 +1,4 @@
 .about {
-<<<<<<< HEAD
-  background-color: #fef9ff;
-  padding: 4rem 1.5rem;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-=======
   padding: 4rem 1.5rem;
   background:
     radial-gradient(800px 600px at 20% 40%, rgba(255,255,255,0.12), rgba(255,255,255,0) 60%),
@@ -30,7 +17,6 @@
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
   padding: 2rem;
->>>>>>> a9b3a65 (changed styles)
 }
 
 @media (min-width: 768px) {
@@ -42,48 +28,18 @@
 
 .imageContainer {
   flex: 1;
-<<<<<<< HEAD
-  text-align: center;
-=======
->>>>>>> a9b3a65 (changed styles)
   display: flex;
   justify-content: center;
 }
 
 .image {
-<<<<<<< HEAD
-  width: 100%;
-  max-width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-=======
   max-width: 100%;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,.15);
->>>>>>> a9b3a65 (changed styles)
 }
 
 .text {
   flex: 2;
-<<<<<<< HEAD
-  color: #054996;
-  padding: 0 1rem;
-}
-
-.text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: #054996;
-  font-family: 'Work Sans', sans-serif;
-}
-
-.text p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  color: #555;
-=======
   padding-left: 0;
 }
 
@@ -105,26 +61,10 @@
   line-height: 1.7;
   margin-bottom: 1.25rem;
   font-size: 1.05rem;
->>>>>>> a9b3a65 (changed styles)
 }
 
 .button {
   display: inline-block;
-<<<<<<< HEAD
-  background-color: #fcd471;
-  color: #2e2b4f;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-top: 1.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #eebf4f;
-=======
   padding: 0.8rem 1.6rem;
   background: #fbbf24; /* warm golden CTA */
   color: #1a1a1a;
@@ -137,5 +77,4 @@
 .button:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 16px rgba(109,107,230,.5); /* purple glow */
->>>>>>> a9b3a65 (changed styles)
 }

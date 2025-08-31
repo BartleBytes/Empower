@@ -1,45 +1,13 @@
 .services {
-<<<<<<< HEAD
-  background-color: #f9fbfa;
-=======
   background:
     radial-gradient(800px 600px at 20% 40%, rgba(255,255,255,0.12), rgba(255,255,255,0) 60%),
     radial-gradient(700px 520px at 78% 50%, rgba(255,255,255,0.08), rgba(255,255,255,0) 65%),
     #0a1930;
->>>>>>> a9b3a65 (changed styles)
   padding: 4rem 1.5rem;
   text-align: center;
 }
 
 .services h2 {
-<<<<<<< HEAD
-  font-size: 2rem;
-  color: #054996;
-  margin-bottom: 2rem;
-}
-
-.cardGrid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  color: #4b3f72;
-  font-weight: 500;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-=======
   font-family: "Playfair Display", serif;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   color: #fff;
@@ -141,5 +109,4 @@
   .cardGrid { grid-template-columns: 1fr; }
   .cardGrid .card:nth-child(n) { grid-column: auto; }
   .card { width: 180px; height: 180px; }
->>>>>>> a9b3a65 (changed styles)
 }
