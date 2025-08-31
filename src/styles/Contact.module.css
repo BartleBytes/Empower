@@ -6,11 +6,15 @@
     radial-gradient(700px 520px at 78% 50%, rgba(255,255,255,0.08), rgba(255,255,255,0) 65%),
     #0a1930; /* base navy */
   font-family: 'Ubuntu', sans-serif;
+  min-height: calc(100svh - 80px); /* gives space under sticky nav */
+  display: grid;
+  place-items: start center;
 }
 
 /* White card */
 .contactWrapper {
-  max-width: 680px;
+  width: 100%;
+  max-width: 720px;
   margin: 0 auto;
   padding: 2rem 2.25rem;
   background: #ffffff;
@@ -18,18 +22,69 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* Title + intro text scoped to the card */
-.contactWrapper h2 {
+/* Title + intro text (scoped, not global) */
+.title {
   font-family: "Playfair Display", serif;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: #054996;
   margin-bottom: .5rem;
 }
-
-.contactWrapper p {
+.intro {
   color: #4a5568;
   margin-bottom: 1.25rem;
   line-height: 1.65;
+}
+
+/* Actions row */
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* Primary = brand-colored button */
+.primaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 .95rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background-color: #6d6be6; /* purple */
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .25s ease, background-color .2s ease;
+}
+.primaryAction:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(109,107,230,0.6), 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Secondary = ghost button */
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 .95rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: transparent;
+  color: #2f2f4f;
+  border: 2px solid rgba(47,47,79,.18);
+  cursor: pointer;
+  transition: border-color .2s ease, color .2s ease, transform .2s ease, box-shadow .25s ease;
+}
+.secondaryAction:hover {
+  color: #054996;
+  border-color: rgba(47,47,79,.35);
+  transform: translateY(-2px);
 }
 
 /* Form */
@@ -39,11 +94,18 @@
   gap: 1rem;
 }
 
-.contactForm label {
-  font-weight: 600;
+.label {
+  display: flex;
+  flex-direction: column;          /* Stack field under label text */
+  gap: .35rem;
+}
+
+.labelText {
+  font-weight: 700;
   color: #334155;
 }
 
+/* Inputs */
 .contactForm input,
 .contactForm textarea {
   width: 100%;
@@ -73,8 +135,8 @@
   box-shadow: 0 0 0 4px rgba(14, 165, 166, 0.15);
 }
 
-/* CTA button with purple glow on hover */
-.contactForm button {
+/* Submit button (scoped class so it doesn’t rely on element selector) */
+.submitBtn {
   align-self: start;
   background-color: #6d6be6;
   color: #ffffff;
@@ -86,17 +148,26 @@
   cursor: pointer;
   transition: transform .2s ease, box-shadow .25s ease;
 }
-
-.contactForm button:hover {
+.submitBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 18px rgba(109,107,230,0.6), 0 8px 24px rgba(0,0,0,0.15);
 }
+.submitBtn:active { transform: translateY(0); }
 
-.contactForm button:active {
-  transform: translateY(0);
+/* Direct email line */
+.directEmail {
+  margin-top: 0.75rem;
+  color: #4a5568;
+  font-size: 0.95rem;
 }
+.mailLink {
+  color: #054996;
+  font-weight: 700;
+  text-decoration: none;
+}
+.mailLink:hover { text-decoration: underline; }
 
-/* Mobile padding */
+/* Mobile */
 @media (max-width: 640px) {
   .contact { padding: 3rem 1rem; }
   .contactWrapper { padding: 1.5rem; }

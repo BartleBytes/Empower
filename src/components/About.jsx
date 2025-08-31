@@ -17,18 +17,35 @@ function About() {
 
         {/* Text */}
         <div className={styles.text}>
-          <h2>Meet Alyssa</h2>
+        <article className={styles.infoCard}>
+          <h3 className={styles.h3}>Why Choose Empower?</h3>
           <p>
-            Alyssa is a dedicated Speech-Language Pathologist with a passion for
-            helping children find their voice. With years of clinical experience
-            and a heart for kids, she works closely with families to build
-            communication skills in a warm, nurturing environment.
+            We believe that communication is a fundamental human right. At
+            Empower Speech Pathology, our certified therapists provide a
+            welcoming and individualized approach for every client—children,
+            teens, and adults alike.
           </p>
+
+          <h3 className={styles.h3}>Our Mission</h3>
           <p>
-            Whether your child needs support with speech sounds, language
-            development, or social communication, Alyssa is committed to
-            personalized care that empowers each child to grow with confidence.
+            To empower individuals of all ages to express themselves confidently
+            and effectively, creating stronger connections with the world around
+            them.
           </p>
+
+          <section className={styles.payment}>
+            <h3 className={styles.h3}>Payment Options</h3>
+            <p>
+              We accept <strong>cash, check, credit card, and HSA card</strong>.
+              We are <strong>private pay only</strong> at this time, but we can
+              provide an invoice for you to submit to your insurance if needed.
+            </p>
+            <p>
+              As a vendor through <strong>AZ ESA</strong>, we can accept direct
+              payment through <strong>ClassWallet</strong>.
+            </p>
+          </section>
+        </article>
 
           <Link to="/contact" className={styles.button}>
             Book a Free Consult
