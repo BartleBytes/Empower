@@ -1,6 +1,6 @@
 import styles from "../styles/AboutPage.module.css";
 import alyssaImg from "../assets/Alyssa_2.jpg";
-import selmaImg from "../assets/selma.jpg"; // <-- add your image file
+import selmaImg from "../assets/Selma.jpg"; // <-- add your image file
 
 export default function About() {
   return (
