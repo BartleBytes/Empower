@@ -4,18 +4,23 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About_Page";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
+import BackToTop from "./components/BackToTop";
 import "./styles/theme.css";
+
 
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <BackToTop />
       <Footer />
     </Router>
   );
