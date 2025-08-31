@@ -4,6 +4,11 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About_Page";
 import Contact from "./pages/Contact";
+<<<<<<< HEAD
+=======
+import "./styles/theme.css";
+
+>>>>>>> a9b3a65 (changed styles)
 
 function App() {
   return (

@@ -24,7 +24,12 @@
   flex: 1;
 }
 
+<<<<<<< HEAD
 .text h2, .text h3 {
+=======
+.text h2,
+.text h3 {
+>>>>>>> a9b3a65 (changed styles)
   color: #1a237e;
   margin-bottom: 0.5rem;
 }
@@ -35,6 +40,27 @@
   margin-bottom: 1.5rem;
 }
 
+<<<<<<< HEAD
+=======
+/* Payment block */
+.payment {
+  margin-top: 2rem;
+}
+
+.payment h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1e3a8a; /* blue-900 */
+  margin-bottom: 0.5rem;
+}
+
+.payment p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Image */
+>>>>>>> a9b3a65 (changed styles)
 .imageContainer {
   flex: 1;
   display: flex;

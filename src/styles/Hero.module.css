@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .hero {
   background: linear-gradient(to right, #f5f3ff, #e0e7ff); /* soft white to blue gradient */
   padding: 4rem 2rem;
@@ -5,6 +6,34 @@
   text-align: center;
 }
 
+=======
+/* ===== HERO with dual spotlights ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+
+  /* base deep navy */
+  background: #0a1930;
+
+  /* two radial glows + base color */
+  background-image:
+    radial-gradient(
+      800px 600px at 20% 40%,       /* glow behind text (left) */
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0.00) 60%
+    ),
+    radial-gradient(
+      700px 520px at 78% 50%,       /* glow behind image (right) */
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.00) 65%
+    );
+  color: #e8eef8;                   /* light text on dark */
+  text-align: center;
+}
+
+/* layout stays the same */
+>>>>>>> a9b3a65 (changed styles)
 .content {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,6 +52,7 @@
   }
 }
 
+<<<<<<< HEAD
 .text {
   max-width: 500px;
 }
@@ -31,11 +61,21 @@
   font-size: 2.8rem;
   font-weight: 700;
   color: #054996;
+=======
+/* text styles tuned for dark bg */
+.text { max-width: 520px; }
+
+.text h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #f4f7ff;                   /* near-white */
+>>>>>>> a9b3a65 (changed styles)
   margin-bottom: 1rem;
 }
 
 .text p {
   font-size: 1.2rem;
+<<<<<<< HEAD
   color: #555;
   margin-bottom: 1.5rem;
 }
@@ -59,4 +99,37 @@
   max-width: 400px;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+=======
+  color: #b9c3d6;                    /* softer secondary */
+  margin-bottom: 1.5rem;
+}
+
+/* CTA: brighter on navy */
+.cta {
+  background-color: #6d6be6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;              /* pill */
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .15s ease, background-color .2s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+.cta:hover { background-color: #5a58d3; transform: translateY(-1px); }
+
+/* image pops on dark bg */
+.image {
+  max-width: 420px;
+  border-radius: 1rem;
+  background: #fff;                        /* keep white background */
+  padding: 1rem;                           /* space around logo */
+  box-shadow: 0 20px 50px rgba(0,0,0,.45); /* lift it off the navy */
+}
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+>>>>>>> a9b3a65 (changed styles)
 }

@@ -1,10 +1,18 @@
 .services {
+<<<<<<< HEAD
   background-color: #f9fbfa;
+=======
+  background:
+    radial-gradient(800px 600px at 20% 40%, rgba(255,255,255,0.12), rgba(255,255,255,0) 60%),
+    radial-gradient(700px 520px at 78% 50%, rgba(255,255,255,0.08), rgba(255,255,255,0) 65%),
+    #0a1930;
+>>>>>>> a9b3a65 (changed styles)
   padding: 4rem 1.5rem;
   text-align: center;
 }
 
 .services h2 {
+<<<<<<< HEAD
   font-size: 2rem;
   color: #054996;
   margin-bottom: 2rem;
@@ -31,4 +39,107 @@
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+=======
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+/* staggered layout (still 5 columns, centered) */
+.cardGrid {
+  max-width: 1150px;                /* keeps layout tight */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;                     /* closer together */
+  justify-items: center;
+}
+
+/* card placement */
+.cardGrid .card:nth-child(1) { grid-column: 1; }
+.cardGrid .card:nth-child(2) { grid-column: 3; }
+.cardGrid .card:nth-child(3) { grid-column: 5; }
+.cardGrid .card:nth-child(4) { grid-column: 2; }
+.cardGrid .card:nth-child(5) { grid-column: 4; }
+
+/* larger circles */
+.card {
+  width: 210px;   /* increased size */
+  height: 210px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  position: relative;
+  isolation: isolate;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* glossy highlight */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(120% 90% at 30% 20%, rgba(255,255,255,.55), rgba(255,255,255,0) 60%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cardInner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* text styling (slightly bigger for larger circles) */
+.cardTitle {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1rem, 2.4vw, 1.3rem);
+  line-height: 1.2;
+  color: #0EA5A6; /* teal accent */
+  margin: 0 0 .4rem;
+}
+
+.cardText {
+  color: #4a5568;
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: clamp(.85rem, 2vw, 1rem);
+}
+
+/* float animation */
+@keyframes floatY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+.float {
+  animation: floatY 5s ease-in-out infinite; /* sped up slightly */
+}
+
+/* teal glow on hover */
+.float:hover {
+  box-shadow: 0 0 25px rgba(14, 165, 166, 0.9),
+              0 0 50px rgba(14, 165, 166, 0.6),
+              0 0 70px rgba(14, 165, 166, 0.4);
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .float { animation: none; }
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .cardGrid { grid-template-columns: 1fr; }
+  .cardGrid .card:nth-child(n) { grid-column: auto; }
+  .card { width: 180px; height: 180px; }
+>>>>>>> a9b3a65 (changed styles)
 }

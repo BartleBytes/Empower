@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .why {
   padding: 4rem 1.5rem;
   background-color: #fef9ff;
@@ -40,4 +41,86 @@
 
 .icon {
   color: #7b6fc2;
+=======
+/* Section background to match hero/services */
+.why {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background:
+    radial-gradient(800px 600px at 20% 40%, rgba(255,255,255,0.12), rgba(255,255,255,0) 60%),
+    radial-gradient(700px 520px at 78% 50%, rgba(255,255,255,0.08), rgba(255,255,255,0) 65%),
+    #0a1930;
+}
+
+/* Heading: serif + white */
+.why h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  color: #fff;
+  margin-bottom: 2.25rem;
+}
+
+/* Responsive three-up grid */
+.grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem; /* tighter, modern spacing */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card: keep rounded rectangle shape */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: clamp(1.25rem, 2.2vw, 2rem);
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  text-align: center;
+  transition: transform .2s ease, box-shadow .25s ease;
+  position: relative;
+  isolation: isolate; /* so the shine stays inside rounded corners */
+}
+
+/* Subtle inner gloss (optional, remove if you want perfectly flat) */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(120% 90% at 30% 15%, rgba(255,255,255,.55), rgba(255,255,255,0) 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Purple glow on hover (no floating) */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 20px rgba(109, 107, 230, .45),
+    0 8px 28px rgba(0,0,0,.16);
+}
+
+/* Icon and text */
+.icon {
+  color: #6d6be6; /* purple accent */
+  margin-bottom: .5rem;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  color: #2a2a2a;
+  margin: .25rem 0 .5rem;
+}
+
+.desc {
+  color: #4a5568;           /* cool gray body */
+  font-size: clamp(.95rem, 1.5vw, 1.05rem);
+  line-height: 1.6;
+}
+
+/* Mobile breathing room */
+@media (max-width: 640px) {
+  .why { padding: 3rem 1rem; }
+>>>>>>> a9b3a65 (changed styles)
 }
