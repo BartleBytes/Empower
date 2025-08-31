@@ -12,7 +12,7 @@ function Navbar() {
       {/* RIGHT: Instagram + menu (IG sits just left of "Home") */}
       <div className={styles.navRight}>
         <a
-          href="https://www.instagram.com/empwrspeech"  // <-- her Instagram
+          href="https://www.instagram.com/empwrspeech/profilecard/?igsh=MW83YTh6bXE1Z21rMg%3D%3D&utm_source=qr"  // <-- her Instagram
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Empower Speech on Instagram"
