@@ -4,6 +4,7 @@ import About from "../components/About";
 import WhyEmpower from "../components/WhyEmpower";
 import Testimonials from "../components/Testimonials";
 import Spacer from "../components/Spacer";
+import WhyPrivateSpeech from "../components/WhyPrivateSpeech";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Services />
       <Spacer />
       <WhyEmpower />
+      <WhyPrivateSpeech />
       <Spacer />
       <Testimonials />
       <Spacer />

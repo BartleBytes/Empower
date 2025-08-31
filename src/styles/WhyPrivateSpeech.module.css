@@ -1,0 +1,131 @@
+/* Mostly white with a subtle navy glow (inverted from your dark sections) */
+.section {
+  padding: 4rem 1.5rem;
+  background:
+    radial-gradient(1100px 800px at 20% 25%, rgba(10,25,48,0.06), rgba(10,25,48,0) 65%),
+    radial-gradient(1000px 720px at 85% 60%, rgba(10,25,48,0.05), rgba(10,25,48,0) 70%),
+    #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Two-column layout (image left, content right) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Framed image */
+.figure {
+  position: relative;
+  margin: 0;
+  isolation: isolate;
+}
+
+.figure img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  border: 10px solid #ffffff; /* white photo border */
+}
+
+/* Offset aqua frame behind the image, like the example */
+.figure::after {
+  content: "";
+  position: absolute;
+  inset: -14px -14px auto auto; /* top-right offset */
+  width: 82%;
+  height: 75%;
+  border-radius: 16px;
+  background: transparent;
+  border: 14px solid #cfe8ef;  /* soft aqua frame */
+  z-index: -1;
+  transform: translate(16px, 28px);
+}
+
+/* Right column content */
+.content h2 {
+  font-family: "Playfair Display", serif;
+  color: #0a1930;
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  margin: 0 0 .5rem;
+}
+
+.intro {
+  color: #445064;
+  line-height: 1.7;
+  margin: 0 0 1.25rem;
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+}
+
+/* Accordion */
+.accordion {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* reset default details spacing */
+.accordion details {
+  border-bottom: 1px solid #eef2f7;
+}
+
+.accordion details:last-child {
+  border-bottom: 0;
+}
+
+.accordion summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.1rem 1.25rem;
+  font-weight: 700;
+  color: #1f2a44;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+/* custom chevron */
+.accordion summary::after {
+  content: "";
+  margin-left: auto;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #8c90f2; /* purple accent */
+  border-bottom: 2px solid #8c90f2;
+  transform: rotate(-45deg);
+  transition: transform .2s ease;
+}
+
+.accordion details[open] summary::after {
+  transform: rotate(135deg);
+}
+
+.accordion p {
+  margin: 0;
+  color: #485a6d;
+  padding: 0 1.25rem 1.1rem 1.25rem;
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+/* spacing on mobile */
+@media (max-width: 600px) {
+  .section { padding: 3rem 1rem; }
+}
