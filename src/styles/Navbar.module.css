@@ -80,3 +80,26 @@
 .igLink:hover .igIcon {
   color: #054996;
 }
+
+/* Tablet */
+@media (max-width: 1024px){
+  .nav{ padding: 1rem 1.25rem; }
+  .menu{ gap: 1.25rem; }
+  .navRight{ gap: .75rem; }
+}
+
+/* Phones */
+@media (max-width: 640px){
+  .nav{ padding: .8rem 1rem; }
+  .menu{
+    gap: .75rem;
+    flex-wrap: wrap;               /* allows wrap when very narrow */
+    justify-content: flex-end;
+  }
+  .menu li a{
+    font-size: .72rem;             /* fits “MEET THE TEAM” on 360px */
+    letter-spacing: .03em;
+  }
+  .igLink{ width: 30px; height: 30px; }
+  .igIcon{ width: 18px; height: 18px; }
+}

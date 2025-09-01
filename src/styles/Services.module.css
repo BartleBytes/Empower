@@ -104,14 +104,19 @@
   transform: translateY(-6px) scale(1.05);
 }
 
-/* reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .float { animation: none; }
+@media (prefers-reduced-motion: reduce){ .float{ animation: none; } }
+
+/* ====== Responsive grid ====== */
+
+/* Small tablets: two columns, centered */
+@media (max-width: 900px){
+  .cardGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .cardGrid .card:nth-child(n){ grid-column:auto; } /* remove stagger */
+  .card{ width: 180px; height: 180px; }
 }
 
-/* responsive */
-@media (max-width: 900px) {
-  .cardGrid { grid-template-columns: 1fr; }
-  .cardGrid .card:nth-child(n) { grid-column: auto; }
-  .card { width: 180px; height: 180px; }
+/* Phones: single column */
+@media (max-width: 520px){
+  .cardGrid{ grid-template-columns: 1fr; gap: 1rem; }
+  .card{ width: 160px; height: 160px; }
 }

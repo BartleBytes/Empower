@@ -86,3 +86,20 @@
   height: auto;
   border-radius: 0.5rem;
 }
+
+
+/* Tweak glows on small screens so they don’t overpower */
+@media (max-width: 768px){
+  .hero{
+    background-image:
+      radial-gradient(520px 380px at 22% 38%, rgba(255,255,255,.18), rgba(255,255,255,0) 58%),
+      radial-gradient(480px 360px at 78% 50%, rgba(255,255,255,.10), rgba(255,255,255,0) 62%);
+  }
+}
+@media (max-width: 420px){
+  .hero{
+    background-image:
+      radial-gradient(380px 280px at 18% 36%, rgba(255,255,255,.18), rgba(255,255,255,0) 55%),
+      radial-gradient(340px 260px at 82% 52%, rgba(255,255,255,.10), rgba(255,255,255,0) 58%);
+  }
+}
