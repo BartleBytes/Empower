@@ -4,7 +4,7 @@ import styles from "../styles/Contact.module.css";
 
 const SP_URL =
   "https://alyssa-empwrspeechpathologysolutionsgmailcom.clientsecure.me";
-const EMAIL = "dylanbartle@hotmail.com";
+const EMAIL = "Empwr.speechpathologysolutions@gmail.com";
 const FORMSPREE_URL = "https://formspree.io/f/xzzjdjpz";
 
 export default function Contact() {
