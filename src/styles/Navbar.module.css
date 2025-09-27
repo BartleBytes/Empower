@@ -11,6 +11,11 @@
   font-family: 'Work Sans', sans-serif;
 }
 
+.navOpen {
+  box-shadow: 0 18px 40px rgba(10, 25, 48, 0.12);
+  z-index: 1100;
+}
+
 /* left: brand only */
 .navLeft {
   display: flex;
@@ -22,6 +27,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;                        /* IG close to Home */
+  position: relative;
 }
 
 /* menu links */
@@ -31,6 +37,51 @@
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.menuToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(47, 47, 79, 0.15);
+  background: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.2s ease;
+}
+
+.menuToggle:hover {
+  border-color: rgba(47, 47, 79, 0.35);
+  box-shadow: 0 10px 24px rgba(10, 25, 48, 0.14);
+}
+
+.menuToggle:active {
+  transform: scale(0.95);
+}
+
+.menuToggleBar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #2f2f4f;
+  margin: 3px 0;
+  transition: transform 0.25s ease, opacity 0.2s ease, width 0.25s ease;
+}
+
+.menuToggleOpen .menuToggleBar:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+  width: 20px;
+}
+
+.menuToggleOpen .menuToggleBar:nth-child(2) {
+  opacity: 0;
+}
+
+.menuToggleOpen .menuToggleBar:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+  width: 20px;
 }
 
 .menu li a {
@@ -90,16 +141,62 @@
 
 /* Phones */
 @media (max-width: 640px){
-  .nav{ padding: .8rem 1rem; }
-  .menu{
-    gap: .75rem;
-    flex-wrap: wrap;               /* allows wrap when very narrow */
-    justify-content: flex-end;
-  }
-  .menu li a{
-    font-size: .72rem;             /* fits “MEET THE TEAM” on 360px */
-    letter-spacing: .03em;
-  }
-  .igLink{ width: 30px; height: 30px; }
+  .nav{ padding: .85rem 1.15rem; }
+  .navRight{ gap: .6rem; }
+  .igLink{ width: 32px; height: 32px; }
   .igIcon{ width: 18px; height: 18px; }
+
+  .menuToggle {
+    display: inline-flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: min(92vw, 340px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 1.35rem 1.5rem;
+    box-shadow: 0 26px 60px rgba(10, 25, 48, 0.18);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: opacity 0.2s ease, transform 0.25s ease;
+  }
+
+  .menuOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .menu li a{
+    display: block;
+    font-size: .95rem;
+    letter-spacing: 0.04em;
+    color: #2f2f4f;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 48, 0.32);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+  z-index: 900;
+  pointer-events: none;
+}
+
+.backdropVisible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
