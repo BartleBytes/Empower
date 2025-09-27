@@ -38,14 +38,15 @@
 
 /* larger circles */
 .card {
-  width: 210px;   /* increased size */
-  height: 210px;
+  --bubble-size: clamp(210px, 22vw + 110px, 240px);
+  width: var(--bubble-size);
+  height: var(--bubble-size);
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 14px 30px rgba(0,0,0,0.25);
   display: grid;
   place-items: center;
-  padding: 1.2rem;
+  padding: clamp(1rem, 4vw, 1.4rem);
   position: relative;
   isolation: isolate;
   transition: transform .25s ease, box-shadow .25s ease;
@@ -66,23 +67,23 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  max-width: 90%;
+  max-width: 92%;
 }
 
 /* text styling (slightly bigger for larger circles) */
 .cardTitle {
   font-family: "Playfair Display", serif;
-  font-size: clamp(1rem, 2.4vw, 1.3rem);
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
   line-height: 1.2;
   color: #0EA5A6; /* teal accent */
   margin: 0 0 .4rem;
-}
+  }
 
 .cardText {
   color: #4a5568;
   font-weight: 500;
   line-height: 1.4;
-  font-size: clamp(.85rem, 2vw, 1rem);
+  font-size: clamp(.82rem, 1.8vw, 1rem);
 }
 
 /* float animation */
@@ -112,11 +113,13 @@
 @media (max-width: 900px){
   .cardGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
   .cardGrid .card:nth-child(n){ grid-column:auto; } /* remove stagger */
-  .card{ width: 180px; height: 180px; }
+  .card{ --bubble-size: clamp(200px, 40vw, 230px); }
 }
 
 /* Phones: single column */
 @media (max-width: 520px){
   .cardGrid{ grid-template-columns: 1fr; gap: 1rem; }
-  .card{ width: 160px; height: 160px; }
+  .card{ --bubble-size: clamp(220px, 68vw, 260px); padding: 1.25rem; }
+  .cardTitle { font-size: clamp(.95rem, 4.5vw, 1.25rem); }
+  .cardText { font-size: clamp(.78rem, 3.8vw, .95rem); }
 }
