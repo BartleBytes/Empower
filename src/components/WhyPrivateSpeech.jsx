@@ -3,8 +3,8 @@ import heroImg from "../assets/why-private-speech.jpg"; // swap for your image
 
 export default function WhyPrivateSpeech() {
   return (
-    <section id="why-private-speech" className={styles.section}>
-      <div className={styles.container}>
+    <section id="why-private-speech" className={`section ${styles.section}`}>
+      <div className={`container ${styles.layout}`}>
         {/* Framed image (left) */}
         <figure className={styles.figure}>
           <img src={heroImg} alt="Child and SLP during a fun therapy activity" />

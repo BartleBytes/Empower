@@ -1,5 +1,6 @@
 .testimonials {
-  padding: 4rem 1.5rem;
+  padding-inline: 0;
+  padding-block: clamp(3rem, 6vw, 6rem);
   text-align: center;
   background:
     radial-gradient(800px 600px at 20% 40%, rgba(255,255,255,0.12), rgba(255,255,255,0) 60%),
@@ -7,17 +8,36 @@
     #0a1930; /* same dark navy as hero */
 }
 
-.testimonials h2 {
+.header {
+  max-width: 680px;
+  margin: 0 auto 2.75rem;
+  color: #f8fafc;
+}
+
+.tagline {
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: rgba(248, 250, 252, 0.65);
+  margin-bottom: 0.65rem;
+}
+
+.header h2 {
   font-family: "Playfair Display", serif;
   font-size: clamp(1.9rem, 3vw, 2.6rem);
-  color: #fff;
-  margin-bottom: 2.25rem;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  line-height: 1.65;
+  color: rgba(236, 245, 255, 0.84);
 }
 
 /* three-up responsive grid */
 .grid {
-  max-width: 1180px;
-  margin: 0 auto;
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -67,5 +87,5 @@
 
 /* mobile padding */
 @media (max-width: 640px) {
-  .testimonials { padding: 3rem 1rem; }
+  .testimonials { padding-block: 3.25rem; }
 }

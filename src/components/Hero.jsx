@@ -4,8 +4,8 @@ import placeholder from "../assets/placeholder.png";
 
 function Hero() {
   return (
-    <section className={styles.hero}>
-      <div className={styles.content}>
+    <section className={`section ${styles.hero}`}>
+      <div className={`container ${styles.content}`}>
         <div className={styles.text}>
           <h1>Empower Speech Pathology</h1>
           <p>

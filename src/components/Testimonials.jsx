@@ -21,17 +21,26 @@ function Testimonials() {
   ];
 
   return (
-    <section className={styles.testimonials}>
-      <h2>What Families Are Saying</h2>
+    <section className={`section ${styles.testimonials}`}>
+      <div className="container">
+        <div className={styles.header}>
+          <p className={styles.tagline}>Client Feedback</p>
+          <h2>What Families Are Saying</h2>
+          <p className={styles.lead}>
+            Stories from parents, educators, and students who have partnered with
+            Empower Speech Pathology.
+          </p>
+        </div>
 
-      <div className={styles.grid}>
-        {items.map((t) => (
-          <article key={t.author} className={styles.card}>
-            <Quote aria-hidden="true" size={28} className={styles.icon} />
-            <blockquote className={styles.quote}>“{t.quote}”</blockquote>
-            <p className={styles.author}>— {t.author}</p>
-          </article>
-        ))}
+        <div className={styles.grid}>
+          {items.map((t) => (
+            <article key={t.author} className={styles.card}>
+              <Quote aria-hidden="true" size={28} className={styles.icon} />
+              <blockquote className={styles.quote}>“{t.quote}”</blockquote>
+              <p className={styles.author}>— {t.author}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

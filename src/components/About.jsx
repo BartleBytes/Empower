@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <section className={styles.about}>
-      <div className={styles.container}>
+    <section className={`section ${styles.about}`}>
+      <div className={`container ${styles.inner}`}>
         {/* Image */}
         <div className={styles.imageContainer}>
           <img

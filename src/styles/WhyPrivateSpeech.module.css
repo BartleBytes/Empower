@@ -1,17 +1,16 @@
 /* Mostly white with a subtle navy glow (inverted from your dark sections) */
 .section {
-  padding: 4rem 1.5rem;
+  padding-inline: 0;
+  padding-block: clamp(3rem, 6vw, 6rem);
   background:
     radial-gradient(1100px 800px at 20% 25%, rgba(10,25,48,0.06), rgba(10,25,48,0) 65%),
     radial-gradient(1000px 720px at 85% 60%, rgba(10,25,48,0.05), rgba(10,25,48,0) 70%),
     #ffffff;
-  font-family: 'Ubuntu', sans-serif;
 }
 
 /* Two-column layout (image left, content right) */
-.container {
+.layout {
   max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 1.1fr;
@@ -19,7 +18,7 @@
 }
 
 @media (max-width: 900px) {
-  .container {
+  .layout {
     grid-template-columns: 1fr;
   }
 }
@@ -127,5 +126,5 @@
 
 /* spacing on mobile */
 @media (max-width: 600px) {
-  .section { padding: 3rem 1rem; }
+  .section { padding-block: 3rem; }
 }

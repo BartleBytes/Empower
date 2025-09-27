@@ -1,20 +1,24 @@
 .footer {
-  color: white !important;
-  background-color: white;
-  padding: 2rem 1.5rem;
+  background: #0a1930;
+  color: rgba(248, 250, 252, 0.88);
+  padding: 2.25rem 1.5rem;
   text-align: center;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
 }
 
 .footer a {
-  color: #e0e0ff !important;
-  margin: 0 1rem;
+  color: #a5f3fc;
+  margin: 0 0.75rem;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+  color: #fcd34d;
 }
 
 .footer p {
-  color: navy !important;
+  margin: 0;
+  color: inherit;
 }

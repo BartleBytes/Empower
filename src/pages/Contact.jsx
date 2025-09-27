@@ -43,8 +43,8 @@ export default function Contact() {
   };
 
   return (
-    <section className={styles.contact}>
-      <div className={styles.contactWrapper}>
+    <section className={`section ${styles.contact}`}>
+      <div className={`container ${styles.contactWrapper}`}>
         <h2 className={styles.title}>Contact Us</h2>
         <p className={styles.intro}>
           We’d love to hear from you. Choose an option below or send us a
