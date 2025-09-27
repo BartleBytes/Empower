@@ -153,9 +153,9 @@
   .menu {
     position: absolute;
     top: calc(100% + 0.75rem);
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+    left: 50%;
+    right: auto;
+    margin: 0;
     width: min(92vw, 340px);
     flex-direction: column;
     align-items: stretch;
@@ -166,14 +166,16 @@
     box-shadow: 0 26px 60px rgba(10, 25, 48, 0.18);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-12px);
+    transform: translate(-50%, -12px);
     transition: opacity 0.2s ease, transform 0.25s ease;
+    max-height: min(70vh, 420px);
+    overflow-y: auto;
   }
 
   .menuOpen {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translate(-50%, 0);
   }
 
   .menu li a{
