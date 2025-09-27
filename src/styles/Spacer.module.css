@@ -1,8 +1,24 @@
 .spacer {
   height: 200px;
+  --parallax-offset: 0px;
   background-image: url("../assets/background-grow.jpeg");
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center calc(50% + var(--parallax-offset));
+  transition: background-position 0.2s ease-out;
+  will-change: background-position;
+}
+
+@media (max-width: 768px) {
+  .spacer {
+    height: 140px;
+  }
+}
+
+@media (pointer: coarse), (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .spacer {
+    background-attachment: scroll;
+    background-position: center;
+  }
 }
