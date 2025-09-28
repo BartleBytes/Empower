@@ -5,7 +5,7 @@ import styles from "../styles/Contact.module.css";
 const SP_URL =
   "https://alyssa-empwrspeechpathologysolutionsgmailcom.clientsecure.me";
 const EMAIL = "Empwr.speechpathologysolutions@gmail.com";
-const FORMSPREE_URL = "https://formspree.io/f/xzzjdjpz";
+const FORMSPREE_URL = "https://formspree.io/f/xqayevwn";
 
 export default function Contact() {
   const [status, setStatus] = useState("idle");
