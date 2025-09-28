@@ -5,18 +5,18 @@ function Testimonials() {
   const items = [
     {
       quote:
-        "Empower has made a huge difference in our child’s confidence. We’re so grateful for the support and personalized care.",
-      author: "Sarah R., Parent",
+        "Alyssa is amazing. She is punctual, intentional with her instruction and makes it fun for the kiddos by using games and other sweet tools to help her students produce the sounds being worked on. My son has made leaps in his speech and adores Alyssa.",
+      author: "Sarah Marano",
     },
     {
       quote:
-        "As a teacher, I’ve seen firsthand how Empower Speech Pathology changes lives. Their therapists are warm, professional, and effective.",
-      author: "Jason M., Elementary Educator",
+        "My daughter truly considered her a friend she enjoyed their time so much. I recommend Empowerm Speech to any one who struggles with speech she is phenomenal",
+      author: "Rochelle Whitney",
     },
     {
       quote:
-        "I can't say enough good things about this team. They helped my son find his voice — literally and figuratively.",
-      author: "Emily L., Parent",
+        "Alyssa is fantastic and my son enjoyed his appointments every week with her. We will continue using Empower for future services.",
+      author: "Danielle",
     },
   ];
 
