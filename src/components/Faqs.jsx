@@ -3,29 +3,29 @@ import styles from "../styles/Faqs.module.css";
 
 const FAQS = [
   {
-    question: "What ages do you serve at Empower Speech Pathology?",
+    question: "What types of clients do you work with?",
     answer:
-      "We work with toddlers through teens and young adults. Every plan is tailored to the client’s developmental stage, strengths, and communication goals.",
+      "We provide individualized speech and language therapy for children, teens, and adults. Our specialties include speech sound disorders, language delays, social communication, fluency (stuttering), and support for clients with developmental or medical diagnoses such as stroke recovery and aphasia.",
   },
   {
-    question: "Do you offer in-home or teletherapy services?",
+    question: "Do I need a referral to start speech therapy?",
     answer:
-      "Yes. Sessions can take place in your home, at our Scottsdale office, or virtually. We’ll recommend the format that best supports your family’s schedule and your child’s success.",
+      "No referral is required. Families can reach out directly to schedule an evaluation or therapy sessions. If your pediatrician, teacher, or another professional has recommended speech therapy, you can contact us directly to get started.",
   },
   {
-    question: "How do you personalize a therapy plan?",
+    question: "What can I expect during the first session?",
     answer:
-      "We start with a comprehensive assessment, then collaborate with caregivers and educators to choose targets, session frequency, and home practice routines that fit your child’s needs.",
+      "The first session is typically an evaluation. We’ll review your concerns, collect background information, and complete play-based or structured assessments depending on age. From there, we’ll discuss recommendations and create an individualized therapy plan together.",
   },
   {
-    question: "Can you help us navigate insurance or ESA funding?",
+    question: "How long are sessions?",
     answer:
-      "We operate as private pay, but we provide detailed superbills for insurance reimbursement and accept ClassWallet for Arizona ESA families.",
+      "Most sessions are typically 30 or 50 minutes, depending on the client’s needs, attention, and therapy goals. Session frequency is determined collaboratively to best support progress.",
   },
   {
-    question: "How soon can we get started?",
+    question: "Do you offer in-person or virtual therapy?",
     answer:
-      "Most families begin within one to two weeks. Reach out through the contact form and we’ll schedule a free consultation to map out next steps.",
+      "We offer both! In-person sessions are available locally, and teletherapy is available for families who prefer the flexibility of online sessions.",
   },
 ];
 
