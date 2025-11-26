@@ -11,8 +11,10 @@ ALLOWED_HOSTS = [h for h in os.getenv("ALLOWED_HOSTS", "").split(",") if h] or [
 CSRF_TRUSTED_ORIGINS = [o for o in os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",") if o]
 CORS_ALLOWED_ORIGINS = [o for o in os.getenv("CORS_ALLOWED_ORIGINS", "").split(",") if o]
 
-# Secret key from environment
-SECRET_KEY = os.getenv("SECRET_KEY", SECRET_KEY)
+# Secret key from environment (required in production)
+SECRET_KEY = os.getenv("SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError("SECRET_KEY environment variable is required in production settings")
 
 # Database: expect DATABASE_URL in env (Render Postgres)
 DATABASES["default"] = dj_database_url.config(
