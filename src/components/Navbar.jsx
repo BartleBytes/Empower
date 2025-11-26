@@ -96,6 +96,11 @@ function Navbar() {
               </Link>
             </li>
             <li>
+              <Link to="/blog" onClick={closeMenu}>
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link to="/contact" onClick={closeMenu}>
                 Contact
               </Link>

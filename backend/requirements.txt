@@ -1,0 +1,7 @@
+Django>=5.2,<5.3
+wagtail>=7.2,<7.3
+django-cors-headers>=4.9,<5
+gunicorn>=23.0,<24
+whitenoise>=6.8,<7
+psycopg2-binary>=2.9,<3
+dj-database-url>=2.3,<3

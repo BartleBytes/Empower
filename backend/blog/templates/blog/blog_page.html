@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-blogpage{% endblock %}
+
+{% block content %}
+<article class="blog-post">
+    <header class="blog-post__header">
+        <h1>{{ page.title }}</h1>
+        {% if page.first_published_at %}
+            <p class="blog-post__meta">{{ page.first_published_at|date:"F j, Y" }}</p>
+        {% endif %}
+        {% if page.hero_image %}
+            {% image page.hero_image fill-1200x600 as hero %}
+            <img src="{{ hero.url }}" alt="{{ hero.alt }}" class="blog-post__hero">
+        {% endif %}
+        {% if page.intro %}
+            <div class="blog-post__intro">{{ page.intro|richtext }}</div>
+        {% endif %}
+    </header>
+
+    <div class="blog-post__body">
+        {% for block in page.body %}
+            {% if block.block_type == "paragraph" %}
+                <div class="blog-post__paragraph">{{ block.value|richtext }}</div>
+            {% elif block.block_type == "image" %}
+                {% image block.value fill-1200x800 as body_image %}
+                <figure class="blog-post__image">
+                    <img src="{{ body_image.url }}" alt="{{ body_image.alt }}">
+                </figure>
+            {% else %}
+                {{ block }}
+            {% endif %}
+        {% endfor %}
+    </div>
+</article>
+{% endblock %}

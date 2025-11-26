@@ -1,13 +1,26 @@
-# React + Vite
+# Empower Speech Pathology
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend: React + Vite.  
+Backend: Wagtail (Django) CMS for blog content, running in `backend/`.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Backend (Wagtail API + admin):
+- `cd backend`
+- `source .venv/bin/activate`
+- `python manage.py runserver 8000`
+- Admin at `http://localhost:8000/admin`, API at `http://localhost:8000/api/v2/pages/`
 
-## Expanding the ESLint configuration
+Frontend (Vite):
+- In project root: `npm install` (first run) then `npm run dev`
+- Dev server at `http://localhost:5173`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Empower
+## Backend notes
+- CORS is open to `http://localhost:5173`.
+- Blog model lives in `backend/blog/models.py` and is exposed via the Wagtail API.
+- Media uploads live in `backend/media/` during development.
+
+## Next steps
+- Create a superuser for the CMS: `cd backend && source .venv/bin/activate && python manage.py createsuperuser`
+- Build React routes/components to consume the blog API (list + detail).
+- Swap SQLite for Postgres and configure cloud storage for media before production.
