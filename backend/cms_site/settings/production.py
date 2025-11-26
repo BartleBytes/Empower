@@ -1,14 +1,40 @@
+import os
+
+import dj_database_url
+
 from .base import *
 
 DEBUG = False
 
-# ManifestStaticFilesStorage is recommended in production, to prevent
-# outdated JavaScript / CSS assets being served from cache
-# (e.g. after a Wagtail upgrade).
-# See https://docs.djangoproject.com/en/5.2/ref/contrib/staticfiles/#manifeststaticfilesstorage
-STORAGES["staticfiles"][
-    "BACKEND"
-] = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+# Hosts and origins (set these via environment variables in Render)
+ALLOWED_HOSTS = [h for h in os.getenv("ALLOWED_HOSTS", "").split(",") if h] or []
+CSRF_TRUSTED_ORIGINS = [o for o in os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",") if o]
+CORS_ALLOWED_ORIGINS = [o for o in os.getenv("CORS_ALLOWED_ORIGINS", "").split(",") if o]
+
+# Secret key from environment
+SECRET_KEY = os.getenv("SECRET_KEY", SECRET_KEY)
+
+# Database: expect DATABASE_URL in env (Render Postgres)
+DATABASES["default"] = dj_database_url.config(
+    conn_max_age=600,
+    ssl_require=True,
+)
+
+# Static files: serve via Whitenoise
+MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "wagtail.contrib.redirects.middleware.RedirectMiddleware",
+]
+
+STORAGES["staticfiles"]["BACKEND"] = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 try:
     from .local import *
