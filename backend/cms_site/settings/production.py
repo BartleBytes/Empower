@@ -7,7 +7,13 @@ from .base import *
 DEBUG = False
 
 # Hosts and origins (set these via environment variables in Render)
-ALLOWED_HOSTS = [h for h in os.getenv("ALLOWED_HOSTS", "").split(",") if h] or []
+ALLOWED_HOSTS = [h for h in os.getenv("ALLOWED_HOSTS", "").split(",") if h]
+# Render provides hostname in env; include it if present. Fallback to *.onrender.com to avoid DisallowedHost during health checks.
+render_host = os.getenv("RENDER_EXTERNAL_HOSTNAME")
+if render_host:
+    ALLOWED_HOSTS.append(render_host)
+ALLOWED_HOSTS.append(".onrender.com")
+ALLOWED_HOSTS = list(dict.fromkeys(ALLOWED_HOSTS))  # dedupe, preserve order
 CSRF_TRUSTED_ORIGINS = [o for o in os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",") if o]
 CORS_ALLOWED_ORIGINS = [o for o in os.getenv("CORS_ALLOWED_ORIGINS", "").split(",") if o]
 
