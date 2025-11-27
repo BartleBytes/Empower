@@ -1,1 +1,1 @@
-web: gunicorn cms_site.wsgi:application --bind 0.0.0.0:$PORT
+web: DJANGO_SETTINGS_MODULE=cms_site.settings.production python manage.py collectstatic --noinput && DJANGO_SETTINGS_MODULE=cms_site.settings.production python manage.py migrate --noinput && gunicorn cms_site.wsgi:application --bind 0.0.0.0:$PORT
